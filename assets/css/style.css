@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  display: grid;
+  grid-template-areas: 'header header header' 'container  resultado resultado';
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr 1fr;
+}
+
+#header {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  grid-area: header;
+}
+
+.container {
+  background: white;
+  padding: 130px 20px 20px 20px;
+  grid-area: container;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: center;
+}
+
+#resultado {
+  grid-area: resultado;
+}
+
+.box {
+  background-color: white;
+  padding-bottom: 0.5rem;
+}
+
+.box ul {
+  padding: 130px 20px 20px 20px;
+  width: 60%;
+  height: auto;
+}
+
+.box ul h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.box ul li {
+  text-align: center;
+  margin-left: 1rem;
+  list-style: none;
+  margin-top: 0.8rem;
+}
+
+.container form input,
+form label,
+form button {
+  margin-top: 50px;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+form button {
+  border: 1px solid black;
+  background: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+form button:hover {
+  background: black;
+  color: white;
+}
+
+.apagar {
+  border: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.apagar:hover {
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 971px) {
+  body {
+    grid-template-areas: 'header header header' 'container  container container' 'resultado resultado resultado' 'footer  footer footer';
+    grid-template-columns: 1fr;
+    grid-row: 1fr;
+    height: 100vh;
+  }
+
+  .container {
+    border-bottom: 1px solid black;
+    border-right: 0px;
+    height: auto;
+  }
+
+  .box ul li {
+    text-align: center;
+  }
+
+  .box {
+    margin-bottom: 100px;
+  }
+}
